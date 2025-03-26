@@ -3,7 +3,7 @@ import { useState } from "react";
 import { json } from "stream/consumers";
 
 const ContactForm = ({ existingContact = {}, updateCallback }) => {
-    const [fristName, setFirstName] = useState(existingContact.firstName || "");
+    const [first, setFirstName] = useState(existingContact.firstName || "");
     const [lastName, setLastName] = useState(existingContact.lastName || "");
     const [email, setEmail] = useState(existingContact.email || "");
 
@@ -13,7 +13,7 @@ const ContactForm = ({ existingContact = {}, updateCallback }) => {
         e.preventDefault()
 
         const data = {
-            fristName,
+            firstName,
             lastName,
             email
         }
